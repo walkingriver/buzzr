@@ -1,12 +1,35 @@
 ﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title></title>
+    <title>Game Show Buzzer</title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <input type="button" id="reset" value="Reset" />
-    <input type="button" id="buzz" value="Buzz" />
-    <script src="Scripts/jquery-1.6.4.js"></script>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+                <h1>Game Show Buzzer</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm12 well">
+                <span id="youwin" class="hidden">YOU WIN!</span>
+                <span id="sorry" class="hidden">sorry...</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3 col-sm-offset-3 well">
+                <input type="button" class="btn btn-lg btn-primary center-block" id="buzz" value="Buzz" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3 col-sm-offset-3 well">
+                <input type="button" class="btn btn-lg btn-default center-block" id="reset" value="Reset" />
+            </div>
+        </div>
+    </div>
+    <script src="Scripts/jquery-1.9.1.js"></script>
     <script src="Scripts/jquery.signalR-2.0.1.js"></script>
     <script src="signalr/hubs"></script>
     <script src="app/index.js"></script>

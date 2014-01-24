@@ -2,20 +2,24 @@
 $(function () {
     var $buzz = $('#buzz'),
         $reset = $('#reset'),
+        $youwin = $('#youwin'),
+        $sorry = $('#sorry'),
         hub = $.connection.buzzer;
 
     hub.client.youWin = function () {
-        alert('YOU WIN');
+        $youwin.removeClass('hidden');
     };
 
     hub.client.sorry = function () {
         $buzz.attr("disabled", "disabled");
-        alert('Sorry');
+        $sorry.removeClass('hidden');
     };
 
     hub.client.reset = function () {
         console.log('Reset');
         $buzz.removeAttr("disabled");
+        $sorry.addClass('hidden');
+        $youwin.addClass('hidden');
     };
 
     $.connection.hub.start().done(function () {
