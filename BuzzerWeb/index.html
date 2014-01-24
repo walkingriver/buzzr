@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
     <title>Game Show Buzzer</title>
     <link href="Content/bootstrap.css" rel="stylesheet" />
@@ -8,24 +8,21 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-sm-8 col-sm-offset-2">
-                <h1>Game Show Buzzer</h1>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Gameshow Buzzer
+                        <span id="youwin" class="label label-success hidden">YOU WIN!</span>
+                        <span id="sorry" class="label label-danger hidden">sorry</span>
+                    </h3>
+                </div>
+                <div class="panel-body center-block">
+                    <input type="button" class="btn btn-lg btn-primary" id="buzz" value="Buzz" />
+                </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-sm12 well">
-                <span id="youwin" class="hidden">YOU WIN!</span>
-                <span id="sorry" class="hidden">sorry...</span>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-3 col-sm-offset-3 well">
-                <input type="button" class="btn btn-lg btn-primary center-block" id="buzz" value="Buzz" />
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-3 col-sm-offset-3 well">
-                <input type="button" class="btn btn-lg btn-default center-block" id="reset" value="Reset" />
+            <div class="pull-right">
+                <input type="button" class="btn btn-default center-block" id="reset" value="Reset" />
             </div>
         </div>
     </div>
