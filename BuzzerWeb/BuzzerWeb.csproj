@@ -80,6 +80,7 @@
   <ItemGroup>
     <Content Include="app\js\signalRSvc.js" />
     <Content Include="app\js\gameshowBuzzerApp.js" />
+    <Content Include="Content\buzzer.css" />
     <Content Include="index.html" />
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-animate.min.js" />

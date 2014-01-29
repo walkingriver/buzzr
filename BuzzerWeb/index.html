@@ -3,23 +3,22 @@
 <head>
     <title>Game Show Buzzer</title>
     <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/buzzer.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body ng-app="gameshowBuzzerApp" ng-controller="buzzerController as vm">
     <div class="container">
         <div class="row">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">
-                        Gameshow Buzzer {{vm.title}}
-                        <span id="youwin" class="label label-success" ng-show="vm.winner">YOU WIN!</span>
-                        <span id="sorry" class="label label-danger" ng-show="vm.sorry">sorry</span>
-                    </h3>
-                </div>
-                <div class="panel-body center-block">
-                    <input type="button" class="btn btn-lg btn-primary" value="Buzz" ng-click="vm.buzz()" ng-disabled="!vm.ready()" />
-                </div>
-            </div>
+            <h3>
+                Gameshow Buzzer {{vm.title}}
+            </h3>
+        </div>
+        <div class="row">
+
+        </div>
+        <div class="row">
+            <!--<a class="btn btn-danger" ng-click="vm.buzz()" ng-disabled="!vm.ready()">Buzz</a>-->
+            <a class="buzzer" ng-class="vm.winner?'winner':''" ng-click="vm.buzz()" ng-disabled="vm.isNotReady()">&nbsp;</a>
         </div>
         <div class="row">
             <div class="pull-right">
