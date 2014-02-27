@@ -1,0 +1,26 @@
+<div>
+    <div class="row">
+        <h3>
+            Gameshow Buzzer
+        </h3>
+    </div>
+    <div class="row">
+        <h4>Join a game</h4>
+    </div>
+    <div class="row">
+        <form class="form form-inline" name="setName" ng-submit="vm.setPlayerName()"
+              ng-controller="buzzerController as vm">
+            <label>Player Name:
+                <input type="text" name="player" placeholder="Enter your name" required autofocus
+                       ng-model="vm.playerName" /> </label>
+            <input type="button" class="btn btn-primary btn-sm" value="Join"/>
+
+            <span class="has-error" ng-show="setName.player.$error.required">Required!</span>
+        </form>
+        <tt>name = {{vm.playerName}}</tt><br>
+        <tt>setName.name.$valid = {{setName.name.$valid}}</tt><br>
+        <tt>setName.name.$error = {{setName.name.$error}}</tt><br>
+        <tt>setName.$valid = {{setName.$valid}}</tt><br>
+        <tt>setName.$error.required = {{!!setName.$error.required}}</tt><br>
+    </div>
+</div>

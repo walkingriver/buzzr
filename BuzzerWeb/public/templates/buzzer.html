@@ -1,0 +1,13 @@
+<div ng-controller="buzzerController as vm">
+    <div class="row">
+        <h3>
+            Gameshow Buzzer {{vm.title}}
+        </h3>
+    </div>
+    <div class="row">
+
+    </div>
+    <div class="row">
+        <button class="buzzer" ng-class="vm.winner?'winner':''" ng-click="vm.buzz()" ng-disabled="vm.isNotReady()"></button>
+    </div>
+</div>

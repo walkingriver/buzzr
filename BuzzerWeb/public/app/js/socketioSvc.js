@@ -5,30 +5,35 @@
         .factory('comService', ['$rootScope', comService]);
 
     function comService($rootScope) {
-        var socket = io.connect('http://localhost:8080'),
+        var socket,
             userId = '';
 
         return {
             initialize: initialize,
             buzz: sendBuzz,
-            reset: sendReset
+            reset: sendReset,
+            setPlayerName: setPlayerName
         };
 
         function initialize() {
-            socket.on('info', function () {
-                console.log('we are connected to the socket.io server.');
-                socket.emit('message', 'hello server');
-            });
+            if (socket) return;
+
+            socket = io.connect('http://localhost:8080')
+            socket.on('info', onInfo);
             socket.on('winner', onWinner);
             socket.on('reset', onReset);
-            userId = makeUserId();
+            socket.on('playerConnected', onPlayerConnected);
+            socket.on('playerDisconnected', onPlayerDisconnected);
         }
 
-        function makeUserId() {
-            return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
-                var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
-                return v.toString(16);
-            });
+        function onInfo(data) {
+            console.log('we are connected to the socket.io server.');
+            socket.emit('message', 'hello server');
+            socket.emit('announce', {name: $rootScope.name});
+            // Initially set the winner, if one
+            $rootScope.$broadcast('WINNER', {winner: data.winner});
+            $rootScope.$broadcast('PLAYERS', {players: data.players});
+            userId = data.playerId;
         }
 
         function sendBuzz() {
@@ -41,6 +46,11 @@
             socket.emit('reset');
         }
 
+        function setPlayerName(name) {
+            console.log('Setting player name to ' + name);
+            socket.emit('announce', {name: name});
+        }
+
         function onWinner(data) {
             var winnerId = data.winner;
             console.log('client onWinner for ' + winnerId);
@@ -50,12 +60,24 @@
                 console.log('client onSorry');
                 $rootScope.$broadcast('SORRY');
             }
+            // Tell the admin who actually won
+            $rootScope.$broadcast('WINNER', {winner: winnerId});
             $rootScope.$apply();
         }
 
         function onReset(data) {
             console.log('client onReset');
             $rootScope.$broadcast('RESET');
+            $rootScope.$apply();
+        }
+
+        function onPlayerConnected(data) {
+            $rootScope.$broadcast('CONNECT', data.clientId);
+            $rootScope.$apply();
+        }
+
+        function onPlayerDisconnected(data) {
+            $rootScope.$broadcast('DISCONNECT', data.clientId);
             $rootScope.$apply();
         }
     }

@@ -1,0 +1,26 @@
+<div ng-controller="adminController as vm">
+    <div class="row">
+        <div class="well-lg col-sm-10 col-sm-offset-1">
+            Game is currently
+            <span class="label label-success" ng-show="vm.ready">ready</span>
+            <span class="label label-danger" ng-show="!vm.ready">not ready</span>
+            <button class="btn btn-primary"  ng-disabled="vm.ready"
+                    ng-click="vm.reset()">Reset
+            </button>
+        </div>
+    </div>
+     <div class="row">
+        <div class="col-sm-offset-1 col-sm-10">
+            <div class="panel panel-default">
+                <div class="panel-heading panel-title">Players
+                    <span class="badge pull-right">{{vm.players.length}}</span>
+                </div>
+                <ul class="list-group">
+                    <li class="list-group-item"
+                        ng-class="vm.winner===player?'label-success':''"
+                        ng-repeat="player in vm.players">{{player}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

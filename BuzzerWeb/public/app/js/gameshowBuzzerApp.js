@@ -1,10 +1,10 @@
 ﻿(function () {
     'use strict';
 
-    angular.module('gameshowBuzzerApp', [])
-        .controller('buzzerController', ['$scope', 'comService', buzzerController]);
+    angular.module('gameshowBuzzerApp', ['ngRoute', 'ngAnimate'])
+        .controller('buzzerController', ['$scope', '$location', 'comService', buzzerController]);
 
-    function buzzerController($scope, comService) {
+    function buzzerController($scope, $location, comService) {
         var vm = this;
 
         // Bindable properties and functions are placed on vm
@@ -17,6 +17,8 @@
         vm.title = "Connected";
         vm.buzz = buzz;
         vm.reset = reset;
+        vm.setPlayerName = setPlayerName;
+        vm.playerName = 'Glenn';
 
         activate();
 
@@ -41,6 +43,10 @@
             comService.reset();
         };
 
+        function setPlayerName() {
+            comService.setPlayerName(vm.playerName);
+        }
+
         function setupListeners() {
             $scope.$on('YOU_WIN', function (event, data) {
                 console.log('YOU WIN');
@@ -56,6 +62,10 @@
                 console.log('reset');
                 doReset();
 //                $scope.$apply();
+            });
+            $scope.$on('PLAYER_SET', function (event, data) {
+                console.log('Player name set.');
+                $location.path('/buzzer');
             });
         }
     }
