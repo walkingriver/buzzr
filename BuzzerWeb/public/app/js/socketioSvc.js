@@ -18,7 +18,7 @@
         function initialize() {
             if (socket) return;
 
-            socket = io.connect('http://localhost:8080')
+            socket = io.connect('http://localhost:8080');
             socket.on('info', onInfo);
             socket.on('winner', onWinner);
             socket.on('reset', onReset);
@@ -27,13 +27,16 @@
         }
 
         function onInfo(data) {
-            console.log('we are connected to the socket.io server.');
+            console.log('We are connected to the socket.io server.');
             socket.emit('message', 'hello server');
-            socket.emit('announce', {name: $rootScope.name});
+
             // Initially set the winner, if one
             $rootScope.$broadcast('WINNER', {winner: data.winner});
             $rootScope.$broadcast('PLAYERS', {players: data.players});
             userId = data.playerId;
+
+            // And now we need to enter the game.
+            $rootScope.$broadcast('PLAYER_SET');
         }
 
         function sendBuzz() {
