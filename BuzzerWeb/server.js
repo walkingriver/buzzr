@@ -10,21 +10,22 @@
 
     app.configure(setupApp);
     server.listen(8080);
-    io.sockets.on('connection', OnClientConnected);
+    io.sockets.on('connection', onClientConnected);
 
     function setupApp() {
         app.use(app.router);
         app.use(express.static('public'));
     }
 
-    function OnClientConnected(client) {
+    function onClientConnected(client) {
         // Let's capture the client ID in a closure
-        var clientId = client.id;
+        var clientId = client.id,
+        player = {id: clientId, name: ''};
 
         console.log('Player connected: ' + clientId);
 
         // Push our player onto our local list
-        var player = {id: clientId, name: ''};
+        players[clientId] = player;
 
         // These set up event handlers for newly connected client.
         client.on('announce', onAnnounce);
@@ -37,7 +38,6 @@
             console.log('Player announced: ' + clientId + '=' + data.name);
 
             // Update our player in our local list
-            var player = players[clientId];
             player.name = data.name;
 
             // io.socket.emit sends to every connected client.
