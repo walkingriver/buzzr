@@ -16,6 +16,7 @@
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
   <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
   <ItemGroup>
+    <Compile Include="gruntfile.js" />
     <Compile Include="public\app\js\adminController.js" />
     <Compile Include="public\app\js\gameshowBuzzerApp.js" />
     <Compile Include="public\app\js\routes.js" />
