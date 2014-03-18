@@ -5,17 +5,17 @@
         .config(['$routeProvider',
             function ($routeProvider) {
                 $routeProvider.
-                    when('/admin', {
-                        templateUrl: 'templates/admin.html',
+                    when('/admin/:gameCode', {
+                        templateUrl: '/app/js/admin/admin.html',
                         controller: 'adminController'
                     }).
-                    when('/buzzer', {
-                        templateUrl: 'templates/buzzer.html',
+                    when('/game/:gameCode/:playerName', {
+                        templateUrl: '/app/js/buzzer/buzzer.html',
                         controller: 'buzzerController'
                     }).
                     when('/', {
-                        templateUrl: 'templates/game.html',
-                        controller: 'buzzerController'
+                        templateUrl: '/app/js/game/game.html',
+                        controller: 'gameController'
                     }).
                     otherwise({
                         redirectTo: '/'

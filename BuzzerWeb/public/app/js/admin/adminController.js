@@ -2,12 +2,13 @@
     'use strict';
 
     angular.module('gameshowBuzzerApp')
-        .controller('adminController', ['$scope', 'comService', adminController]);
+        .controller('adminController', ['$scope', '$routeParams', 'comService', adminController]);
 
-    function adminController($scope, comService) {
+    function adminController($scope, $routeParams, comService) {
         var vm = this;
 
         // Bindable properties and functions are placed on vm
+        vm.gameId = $routeParams.gameId;
         vm.winner = false;
         vm.ready = false;
         vm.title = "Connected";

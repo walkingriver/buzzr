@@ -8,8 +8,11 @@
 </head>
 <body ng-app="gameshowBuzzerApp">
 <div class="container">
+    <h1>Gameshow Buzzer</h1>
 
-    <ng-view class="slide"></ng-view>
+    <div class="container">
+        <ng-view class="slide"></ng-view>
+    </div>
 </div>
 <script src="Scripts/jquery-1.9.1.js"></script>
 <script src="Scripts/jquery.signalR-2.0.1.js"></script>
@@ -18,8 +21,9 @@
 <script src="Scripts/angular-animate.js"></script>
 <!--<script src="signalr/hubs"></script>-->
 <script src="/socket.io/socket.io.js"></script>
-<script src="app/js/gameshowBuzzerApp.js"></script>
-<script src="app/js/adminController.js"></script>
+<script src="app/js/buzzer/gameshowBuzzerApp.js"></script>
+<script src="app/js/game/gameController.js"></script>
+<script src="app/js/admin/adminController.js"></script>
 <script src="app/js/routes.js"></script>
 <!--<script src="app/js/signalRSvc.js"></script>-->
 <script src="app/js/socketioSvc.js"></script>

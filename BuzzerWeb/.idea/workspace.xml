@@ -2,15 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4392d5d-1e10-47aa-8d89-edf7c25eac45" name="Default" comment="Converted to node.js">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/templates/admin.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/app/js/adminController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/templates/buzzer.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/templates/game.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/app/js/routes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/js/gameshowBuzzerApp.js" afterPath="$PROJECT_DIR$/public/app/js/gameshowBuzzerApp.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/app/js/game/game.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/app/js/game/gameController.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/templates/game.html" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/app/js/adminController.js" afterPath="$PROJECT_DIR$/public/app/js/admin/adminController.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/app/js/gameshowBuzzerApp.js" afterPath="$PROJECT_DIR$/public/app/js/buzzer/gameshowBuzzerApp.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/templates/admin.html" afterPath="$PROJECT_DIR$/public/app/js/admin/admin.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/templates/buzzer.html" afterPath="$PROJECT_DIR$/public/app/js/buzzer/buzzer.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/public/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.js" afterPath="$PROJECT_DIR$/server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/js/socketioSvc.js" afterPath="$PROJECT_DIR$/public/app/js/socketioSvc.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/js/routes.js" afterPath="$PROJECT_DIR$/public/app/js/routes.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="BuzzerWeb.iws" />
@@ -37,7 +37,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="5" selection-start="336" selection-end="336" vertical-scroll-proportion="0.0" vertical-offset="209" max-vertical-offset="627">
+            <state line="10" column="28" selection-start="358" selection-end="358" vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="540">
               <folding />
             </state>
           </provider>
@@ -46,16 +46,25 @@
       <file leaf-file-name="routes.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/app/js/routes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="59" selection-start="627" selection-end="627" vertical-scroll-proportion="0.0" vertical-offset="304" max-vertical-offset="551">
+            <state line="8" column="46" selection-start="274" selection-end="274" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="435">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="game.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/templates/game.html">
+        <entry file="file://$PROJECT_DIR$/public/app/js/game/game.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="24" selection-start="721" selection-end="721" vertical-scroll-proportion="0.0" vertical-offset="95" max-vertical-offset="608">
+            <state line="25" column="63" selection-start="842" selection-end="842" vertical-scroll-proportion="-4.375" vertical-offset="270" max-vertical-offset="1245">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gameController.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/app/js/game/gameController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="36" selection-start="373" selection-end="373" vertical-scroll-proportion="0.24590164" vertical-offset="0" max-vertical-offset="793">
               <folding />
             </state>
           </provider>
@@ -64,43 +73,52 @@
       <file leaf-file-name="socketioSvc.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/app/js/socketioSvc.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="38" selection-start="1539" selection-end="1539" vertical-scroll-proportion="0.0" vertical-offset="912" max-vertical-offset="1729">
+            <state line="48" column="33" selection-start="1529" selection-end="1529" vertical-scroll-proportion="0.0" vertical-offset="720" max-vertical-offset="1410">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="gameshowBuzzerApp.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/app/js/gameshowBuzzerApp.js">
+        <entry file="file://$PROJECT_DIR$/public/app/js/buzzer/gameshowBuzzerApp.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="62" selection-start="96" selection-end="96" vertical-scroll-proportion="0.0" vertical-offset="57" max-vertical-offset="1482">
+            <state line="3" column="62" selection-start="96" selection-end="96" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="1170">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="buzzer.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/templates/buzzer.html">
+        <entry file="file://$PROJECT_DIR$/public/app/js/buzzer/buzzer.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="0" selection-start="345" selection-end="345" vertical-scroll-proportion="0.0" vertical-offset="247" max-vertical-offset="361">
+            <state line="13" column="0" selection-start="345" selection-end="345" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="285">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="adminController.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/app/js/adminController.js">
+        <entry file="file://$PROJECT_DIR$/public/app/js/admin/adminController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="34" selection-start="2172" selection-end="2172" vertical-scroll-proportion="0.0" vertical-offset="40" max-vertical-offset="1425">
+            <state line="21" column="0" selection-start="554" selection-end="591" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1140">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="server.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="admin.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/app/js/admin/admin.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="43" selection-start="43" selection-end="43" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="server.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="42" selection-start="857" selection-end="857" vertical-scroll-proportion="0.2981455" vertical-offset="342" max-vertical-offset="1672">
+            <state line="80" column="0" selection-start="2767" selection-end="2767" vertical-scroll-proportion="0.0" vertical-offset="527" max-vertical-offset="1320">
               <folding />
             </state>
           </provider>
@@ -136,21 +154,26 @@
         <option value="$PROJECT_DIR$/public/Scripts/admin.html" />
         <option value="$PROJECT_DIR$/public/admin.html" />
         <option value="$PROJECT_DIR$/public/templates/buzzer.html" />
+        <option value="$PROJECT_DIR$/public/app/js/socketioSvc.js" />
+        <option value="$PROJECT_DIR$/public/app/js/gameshowBuzzerApp.js" />
+        <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/public/templates/admin.html" />
         <option value="$PROJECT_DIR$/public/app/js/adminController.js" />
-        <option value="$PROJECT_DIR$/public/app/js/routes.js" />
-        <option value="$PROJECT_DIR$/public/app/js/socketioSvc.js" />
+        <option value="$PROJECT_DIR$/public/app/js/newGameController.js" />
         <option value="$PROJECT_DIR$/public/templates/game.html" />
-        <option value="$PROJECT_DIR$/public/app/js/gameshowBuzzerApp.js" />
+        <option value="$PROJECT_DIR$/public/app/js/gameController.js" />
+        <option value="$PROJECT_DIR$/public/app/js/routes.js" />
         <option value="$PROJECT_DIR$/public/index.html" />
-        <option value="$PROJECT_DIR$/server.js" />
+        <option value="$PROJECT_DIR$/public/app/js/game/game.html" />
+        <option value="$PROJECT_DIR$/public/app/js/game/gameController.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="22" />
-    <option name="width" value="2560" />
-    <option name="height" value="798" />
+    <option name="x" value="1455" />
+    <option name="y" value="-529" />
+    <option name="width" value="1099" />
+    <option name="height" value="1408" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -225,25 +248,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BuzzerWeb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BuzzerWeb" />
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Scripts" />
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -268,6 +277,10 @@
               <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -276,7 +289,7 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.Font" />
+    <property name="options.lastSelected" value="editor.preferences.import" />
     <property name="FullScreen" value="false" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -290,20 +303,14 @@
       <recent name="$PROJECT_DIR$/public/app/js" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/app/js/game" />
+      <recent name="$PROJECT_DIR$/public/app/js/buzzer" />
+      <recent name="$PROJECT_DIR$/public/app/js/admin" />
       <recent name="$PROJECT_DIR$/public/templates" />
       <recent name="$PROJECT_DIR$/public" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager" selected="Node.js.buzzer">
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -314,15 +321,23 @@
       <option name="showConsoleOnStdOut" value="false" />
       <method />
     </configuration>
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
       <setting name="configLocationType" value="CONFIG_FILE" />
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="CHROME" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
@@ -377,15 +392,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="2560" height="798" extended-state="0" />
+    <frame x="1455" y="-529" width="1099" height="1408" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30727023" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13515624" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37021858" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.255687" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36967885" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32921812" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -415,9 +430,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25742188" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32921812" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32921812" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -439,26 +454,26 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/server.js</url>
+          <line>47</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="17" />
+      <option name="time" value="20" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="42" selection-start="857" selection-end="857" vertical-scroll-proportion="0.0" vertical-offset="342" max-vertical-offset="1672">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/app/js/signalRSvc.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="2" selection-start="666" selection-end="790" vertical-scroll-proportion="0.0" vertical-offset="475" max-vertical-offset="1083" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/js/gameshowBuzzerApp.js">
+    <entry file="file://$PROJECT_DIR$/public/app/js/buzzer/gameshowBuzzerApp.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="33" column="26" selection-start="937" selection-end="937" vertical-scroll-proportion="0.0" vertical-offset="627" max-vertical-offset="1235">
           <folding />
@@ -496,7 +511,7 @@
         <state line="25" column="2" selection-start="666" selection-end="790" vertical-scroll-proportion="0.0" vertical-offset="475" max-vertical-offset="1083" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/js/gameshowBuzzerApp.js">
+    <entry file="file://$PROJECT_DIR$/public/app/js/buzzer/gameshowBuzzerApp.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="38" column="22" selection-start="1029" selection-end="1029" vertical-scroll-proportion="0.0" vertical-offset="722" max-vertical-offset="1178">
           <folding />
@@ -534,7 +549,7 @@
         <state line="25" column="2" selection-start="666" selection-end="790" vertical-scroll-proportion="0.0" vertical-offset="475" max-vertical-offset="1083" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/js/gameshowBuzzerApp.js">
+    <entry file="file://$PROJECT_DIR$/public/app/js/buzzer/gameshowBuzzerApp.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="38" column="22" selection-start="1029" selection-end="1029" vertical-scroll-proportion="0.0" vertical-offset="722" max-vertical-offset="1178">
           <folding />
@@ -572,7 +587,7 @@
         <state line="25" column="2" selection-start="666" selection-end="790" vertical-scroll-proportion="0.0" vertical-offset="475" max-vertical-offset="1083" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/js/gameshowBuzzerApp.js">
+    <entry file="file://$PROJECT_DIR$/public/app/js/buzzer/gameshowBuzzerApp.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="38" column="22" selection-start="1029" selection-end="1029" vertical-scroll-proportion="0.0" vertical-offset="171" max-vertical-offset="1178">
           <folding />
@@ -603,7 +618,7 @@
         <state line="25" column="2" selection-start="666" selection-end="790" vertical-scroll-proportion="0.0" vertical-offset="95" max-vertical-offset="1083" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/js/gameshowBuzzerApp.js">
+    <entry file="file://$PROJECT_DIR$/public/app/js/buzzer/gameshowBuzzerApp.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="38" column="22" selection-start="1029" selection-end="1029" vertical-scroll-proportion="0.0" vertical-offset="171" max-vertical-offset="1178">
           <folding />
@@ -704,63 +719,72 @@
         <state line="25" column="2" selection-start="666" selection-end="790" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1083" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/templates/admin.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="10" selection-start="475" selection-end="475" vertical-scroll-proportion="0.5248619" vertical-offset="0" max-vertical-offset="589" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/js/adminController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="34" selection-start="2172" selection-end="2172" vertical-scroll-proportion="0.0" vertical-offset="914" max-vertical-offset="1425">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/app/js/socketioSvc.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="38" selection-start="1539" selection-end="1539" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1729">
+        <state line="48" column="33" selection-start="1529" selection-end="1529" vertical-scroll-proportion="0.0" vertical-offset="720" max-vertical-offset="1410">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/js/routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="59" selection-start="627" selection-end="627" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="551">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/templates/game.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="24" selection-start="721" selection-end="721" vertical-scroll-proportion="0.0" vertical-offset="95" max-vertical-offset="608">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/js/gameshowBuzzerApp.js">
+    <entry file="file://$PROJECT_DIR$/public/app/js/buzzer/gameshowBuzzerApp.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="62" selection-start="96" selection-end="96" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1482">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="5" selection-start="336" selection-end="336" vertical-scroll-proportion="0.0" vertical-offset="209" max-vertical-offset="627">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/templates/buzzer.html">
+    <entry file="file://$PROJECT_DIR$/public/app/js/buzzer/buzzer.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="0" selection-start="345" selection-end="345" vertical-scroll-proportion="0.0" vertical-offset="247" max-vertical-offset="361">
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/js/admin/admin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="43" selection-start="43" selection-end="43" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="480">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="42" selection-start="857" selection-end="857" vertical-scroll-proportion="0.2981455" vertical-offset="342" max-vertical-offset="1672">
+        <state line="80" column="0" selection-start="2767" selection-end="2767" vertical-scroll-proportion="0.0" vertical-offset="527" max-vertical-offset="1320">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/js/admin/adminController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="0" selection-start="554" selection-end="591" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1140">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="28" selection-start="358" selection-end="358" vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="540">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/js/routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="46" selection-start="274" selection-end="274" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="435">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/js/game/game.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="63" selection-start="842" selection-end="842" vertical-scroll-proportion="-4.375" vertical-offset="270" max-vertical-offset="1245">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/js/game/gameController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="36" selection-start="373" selection-end="373" vertical-scroll-proportion="0.24590164" vertical-offset="0" max-vertical-offset="793">
           <folding />
         </state>
       </provider>

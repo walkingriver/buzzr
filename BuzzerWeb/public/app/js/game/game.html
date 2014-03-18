@@ -1,0 +1,77 @@
+<div data-ng-controller="gameController as vm">
+    <div class="row">
+        <fieldset>
+            <legend>Start a new game</legend>
+            <p>Click the button below to administer a new game. You will be given a code for
+                your players to enter to join your game.</p>
+            <a data-ng-href="/admin/{{vm.newGameCode}}" class="btn btn-primary btn-block">
+                Start New Game
+            </a>
+        </fieldset>
+    </div>
+    <div class="row">
+        &nbsp;
+    </div>
+    <div class="row">
+        &nbsp;
+    </div>
+    <div class="row">
+        &nbsp;
+    </div>
+    <div class="row">
+        <fieldset>
+            <legend>Join an existing game</legend>
+            <p>Enter your name and the code provided to join an existing game.</p>
+
+            <form class="form" name="playerNameForm" novalidate>
+                <div class="form-group">
+                    <label for="playerName">
+                        Player Name: </label>  <span class="error label label-danger pull-right"
+                                                     data-ng-show="playerNameForm.playerName.$error.required">Required!</span>
+                    <input type="text" name="playerName"
+                           class="form-control"
+                           id="playerName"
+                           placeholder="Enter your name"
+                           required autofocus
+                           data-ng-model="vm.playerName"
+                            />
+
+                </div>
+                <div class="form-group">
+                    <label for="gameCode">
+                        Game Code:</label>
+            <span class="error label label-danger pull-right"
+                  data-ng-show="playerNameForm.gameCode.$error.required">Required!</span>
+                    <input type="text" name="gameCode"
+                           class="form-control"
+                           id="gameCode"
+                           placeholder="Enter game code"
+                           required
+                           data-ng-model="vm.gameCode"
+                            />
+                </div>
+                <div class="form-group">
+                    <button type="submit"
+                            data-ng-disabled="!playerNameForm.$valid"
+                            class="btn btn-success btn-block"
+                            data-ng-click="vm.join(vm.playerName, vm.gameCode)">Join Existing Game
+                    </button>
+                </div>
+            </form>
+        </fieldset>
+    </div>
+    <!--
+    <div class="row">
+        <tt>playerName = {{vm.playerName}}</tt>
+        <br>
+        <tt>playerNameForm.playerName.$valid = {{playerNameForm.playerName.$valid}}</tt>
+        <br>
+        <tt>playerNameForm.playerName.$error = {{playerNameForm.playerName.$error}}</tt>
+        <br>
+        <tt>playerNameForm.$valid = {{playerNameForm.$valid}}</tt>
+        <br>
+        <tt>playerNameForm.$error.required = {{!!playerNameForm.$error.required}}</tt>
+        <br>
+    </div>
+    -->
+</div>
